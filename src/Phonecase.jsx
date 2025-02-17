@@ -42,7 +42,7 @@ const PhoneCase = () => {
     return (
         <>
 
-            <section className="w-full bg-gradient-to-r from-blue-800 to-blue-600 text-white py-28">
+            <section className="w-full bg-gradient-to-r from-green-500 to-green-400 text-white py-28">
                 <div className="flex flex-col items-center justify-center text-center px-6">
                     <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
                         Create Your Personalized Phone Case Today!
@@ -57,23 +57,22 @@ const PhoneCase = () => {
 
 
             <div className="flex flex-col md:flex-row items-center justify-center p-8 ">
-                <div className="w-full md:w-1/3 bg-blue-100  p-6 shadow-lg rounded-lg flex flex-col items-center justify-center text-center " style={{ height: '80vh' }}>
-                    <h2 className="text-2xl font-semibold text-gray-800">Customize Your Phone Case</h2>
-                    <p className="text-gray-600 mt-2">
-                        Upload an image to apply it to your phone case. Make your case unique with a personal touch!
+                <div className="w-full md:w-1/3   p-6 shadow-lg rounded-lg flex flex-col items-center justify-center text-center " style={{ height: '80vh' }}>
+                    <p className="text-grey-600 font-bold mt-2">
+                        Upload an image to apply it to your phone case. Use the zoom controls to closely inspect your design. Zoom in for detailed views or zoom out to see the full phone case design.
                     </p>
                     <input
                         type="file"
                         accept="image/*"
                         onChange={handleImageUpload}
-                        className="mt-4 p-2 w-full border rounded-md cursor-pointer"
+                        className="mt-4 p-2 w-full border rounded-md cursor-pointer text-grey-600"
                     />
                 </div>
 
                 <div className="w-full md:w-2/3 flex justify-center items-center p-6" style={{ height: '90vh' }}>
                     <Canvas
                         camera={{ position: [0, 0, 5] }} // Move the camera closer for a larger view
-                        className="w-full h-full rounded-lg shadow-lg"
+                        className="w-full h-full rounded-lg shadow-lg bg-yellow-100"
                     >
                         <ambientLight intensity={1} /> {/* Increase brightness */}
                         <directionalLight position={[3, 3, 3]} />
